@@ -1,0 +1,484 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;  /*trình duyệt lướt section mượt hơn*/
+}
+
+
+.row {
+    margin-left: 22px;
+    margin-right: 22px;
+}
+
+.row::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.pull-right {
+    float: right !important; 
+}
+
+.open {
+    display: flex !important;
+}
+
+#main {
+
+}
+
+#header {
+    height: 46.5px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    word-spacing: -5px;  /*khoảng cách giữa các từ*/
+    display: inline-block;
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+}
+
+#nav li a{
+    padding: 0 24px;
+    line-height: 46.5px;  /*độ cao của 1 dòng*/
+    text-decoration: none;
+    display: block;
+}
+
+#nav > li > a {
+    color: #fff;  
+    text-transform: uppercase;  /*in hoa*/
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav .subnav {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+}
+
+#nav .subnav li {
+    display: block;
+    min-width: 160px;  /*sau này thêm chữ vào thì sẽ tự tăng thêm width*/
+}
+
+#nav .subnav li a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38.5px;
+}
+
+#nav .drop-down-icon {
+    padding: 0 5px;
+}
+
+#header .search-btn {
+    float: right;
+} 
+
+#header .search-icon {
+    color: #fff;
+    line-height: 46.5px;
+    padding: 0 24px;
+    cursor: pointer;  /*đổi icon con trỏ chuột*/
+}
+
+#header .search-icon:hover {
+    background-color: #f44336;
+}
+
+#slider {
+    margin-top: 46.5px;  /*ko đụng chạm đến header*/
+    padding-top: 50%;  /*chiều cao bằng 50% chiều rộng của chính nó*/
+    background: url('/assets/img/ny.jpg') top center / contain no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+.text-content {
+    position: absolute;
+    bottom: 47px;
+    
+    width: 100%;  /*căn giữa*/
+    text-align: center;
+}
+
+.text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.text-description {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+#content {
+
+}
+
+#content .content-section {
+    margin-left: auto;  /*content + padding là 800px, margin là auto => nội dung sẽ nằm giữa */
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 800px;
+
+    padding: 64px 0;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+
+    letter-spacing: 4px;  /*khoảng cách giữa các chữ cái*/
+}
+
+#content .section-sub-heading {
+    font-size: 15;
+    font-style: italic;
+    margin-top: 25px;
+    text-align: center;
+
+    opacity: 0.6;  /*độ trong suốt*/
+}
+
+#content .section-about-us {
+    font-size: 15;
+    margin-top: 15px;
+    text-align: justify;
+    line-height: 1.4;  /*khoảng cách giữa các dòng*/
+}
+
+#content .member-list {
+    margin-top: 47px;
+}
+
+#content .member-item {
+    float: left;  /*kéo các item lên cùng 1 hàng*/
+    width: calc(100% / 3);  /*tính khoảng cách từng item*/
+    text-align: center;
+}
+
+#content .member-name {
+    margin: 15px 0;
+}
+
+#content .member-img {
+    width: 60%;  /*width hoặc height, ko cần cả 2*/
+    border-radius: 4px;  /*bo viền*/
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.ticket-list {
+    background: #fff;
+    margin: 30px;
+}
+
+.ticket-list li {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    font-size: 15px;
+    list-style-type: none;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 8px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    background-color: #000;
+    color: #fff;
+    float: right;  /*float có thể đi kèm với width + height*/
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;  /*đi kèm với width + height để ra hình tròn*/
+    text-align: center;  /*căn lề trái phải*/
+    line-height: 24px;  /*căn lề trên dưới, bằng height*/
+    margin-top: -2px;  /*kéo background lên để số 3 có chỗ để căn giữa*/
+    margin-right: 16px;
+}
+
+.places-list {
+    /* margin: 32px 22px 50px; => margin-left và margin-right căn chỉnh cho đều */
+    margin-top: 32px;
+    margin-bottom: 50px;
+}
+
+.place-item {
+    /* float: left;
+    width: calc(100% / 3);
+    padding: 0 8px; */
+}
+
+.place-img {
+    width: 100%;
+    display: block;  /*lược bỏ kẽ hở*/
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+}
+
+.place-time {
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+.place-des {
+    margin-top: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border-style: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-container {
+    width: 900px;
+    min-height: 200px;
+    background-color: #fff;
+    position: relative;
+    animation: modalFadeIn ease 0.5s; /*chuyển động animation*/
+}
+
+.modal-header {
+    background-color: #009688;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 47px 15px;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.modal-header-icon {
+    margin-right: 12px;
+}
+
+.modal-close {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-body {
+    padding: 0 16px;
+}
+
+.modal-label {
+    display: block;
+    margin: 22px 0 12px;
+}
+
+.modal-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.modal-pay {
+    border-style: none;
+    background-color: #009688;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 12px;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.modal-pay:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.modal-help {
+    margin: 24px 0;
+    float: right;
+}
+
+.modal-help a {
+    color: #2196F3;
+}
+
+.contact-container {
+    margin-top: 60px;
+}
+
+.contact-info {
+    width: 340px;
+    font-size: 18px;
+}
+
+.contact-info i[class*="fa-"] {
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+.contact-form {
+    font-size: 18px;
+}   
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 7px;
+    margin-left: 31px;
+    border: 1px solid #ccc;
+}
+
+.contact-form .submit-btn {
+    margin-top: 5px;
+    border-style: none;
+    padding: 10px 15px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.contact-form .submit-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+ .content-map img {
+     width: 100%;
+     filter: grayscale(50%);
+     display: block;
+ }
+
+ #footer {
+    padding: 85px 10px;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+ #footer .social-list a{
+    font-size: 24px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .social-list a:hover {
+    color: rgba(0,0,0,0.3);
+}
+
+#footer .copyright {
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+#footer .copyright a {
+    color: rgba(0, 0, 0, 0.5);
+    text-decoration-color: rgba(0, 0, 0, 0.6);
+    text-decoration-thickness: 1px;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
